@@ -1,0 +1,57 @@
+
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand W-C" href="#">Navbar</a>
+        <button class="navbar-toggler bg-light text-dark" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <!-- <span class="navbar-toggler-icon"></span> -->
+          menu
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto nav-list">
+            <li class="nav-item dropdown" *ngIf='checkLogin'>
+                <a class="nav-link dropdown-toggle W-C" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Select Moveis
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item"[routerLinkActive]='["bg-danger","text-uppercase"]'routerLink='now-playing' >now playing</a>
+                  <a class="dropdown-item" [routerLinkActive]='["bg-danger","text-uppercase"]' routerLink='popular'>popular</a>
+                  <a class="dropdown-item" [routerLinkActive]='["bg-danger","text-uppercase"]' routerLink='trending'>trending</a>
+                  <a class="dropdown-item" [routerLinkActive]='["bg-danger","text-uppercase"]' routerLink='topRated'>top rated</a>
+                  <a class="dropdown-item" [routerLinkActive]='["bg-danger","text-uppercase"]' routerLink='upcoming'>upcoming</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li>
+            <li class="nav-item ">
+              <a class="nav-link W-C" [routerLinkActive]='["bg-danger","text-uppercase"]' routerLink='regestration'>Regestration</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link W-C" [routerLinkActive]='["bg-danger","text-uppercase"]' routerLink='login'>Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link W-C" [routerLinkActive]='["bg-danger","text-uppercase"]' (click)='logOut()' *ngIf='checkLogin'>Log Out</a>
+            </li>
+          
+           
+          </ul>
+         
+        </div>
+      </nav>
+
+
+      <!-- navbar-light bg-light -->
+      <!-- <span class="sr-only">(current)</span> -->
+
+
+<!-- 
+
+  <form class="form-inline my-2 my-lg-0">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form> -->
+
+<!-- 
+
+  <li class="nav-item">
+    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+  </li> -->

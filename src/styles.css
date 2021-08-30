@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Montserrat:ital,wght@0,400;1,300&family=Righteous&display=swap');
+body{
+    background-color: #131722;
+    color: #ffffff;
+    /* font-family: 'Montserrat', sans-serif; 
+     font-family: 'Handlee', cursive; */
+     font-family: 'Righteous', cursive;
+     /* font-weight: 600; */
+}
+@media all and (max-width: 576px) { 
+    img{
+        width: 250px;
+        text-align: center;
+    }
+
+ }
+
+
+
+/* #949cb0 */

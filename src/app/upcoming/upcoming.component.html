@@ -1,0 +1,44 @@
+<section class="container">
+    <div class="row">
+    <div class="col-6 col-sm-6 col-md-4 col-lg-3 add mt-3">
+        <div class="add-col">
+            <hr class="bg-light w-50">
+    
+    
+    <h2>upcoming movies !</h2>
+    <h2> watch now </h2>
+            <hr class="bg-light" >
+             
+        </div>
+    
+    </div>
+   <div *ngFor='let i of moviesArray ; index as x' [routerLink]='["/movieDetails",i.id]' class="col-6 col-sm-6 col-md-4 col-lg-3 movie-item mt-3">
+        <img [src]="imgSrc+i.poster_path" alt="">
+        <h2>{{i.title}}</h2>
+        <p>rate : {{i.vote_average}}</p>
+        <p>id : {{i.id}}</p>
+    
+    </div>
+     
+    
+    
+    
+    
+    <div class="col-6 col-sm-6 col-md-4 col-lg-3 add mt-3">
+        <div class="add-col">
+            <hr class="bg-light w-50">
+    
+    
+    <h2>see another page !</h2>
+    <h2> watch now </h2>
+            <hr class="bg-light" >
+             
+        </div>
+    
+    </div>
+    </div>
+    </section>
+    
+
+
+

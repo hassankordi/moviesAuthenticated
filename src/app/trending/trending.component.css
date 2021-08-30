@@ -1,0 +1,23 @@
+.movie-item{
+    padding: 10px;
+/* box-shadow: 1px 3px 4px 0  rgba(0, 0,0, 0.6); */
+}
+.movie-item img{
+width: 100%;
+}
+.add-col h2{
+font-size: 50px;
+}
+.add-col hr{
+    height: 2px;
+}
+.add{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.movie-item:hover{
+    transform: translateY(-10px);
+    box-shadow: 1px 3px 4px 0  rgba(0, 0,0, 0.6);
+}

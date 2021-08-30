@@ -1,0 +1,78 @@
+
+<div class="container my-5">
+    <form  [formGroup]='singUpForm' (ngSubmit)='postData()'>
+        <h1>Regestration form :</h1>
+        <div class="my-3">
+            <label for="first_name">first name :</label>
+            <input type="text" id="first_name" formControlName='first_name' class="form-control">
+            <p *ngIf='
+            singUpForm.controls.first_name.invalid 
+            && singUpForm.controls.first_name.touched' class="text-danger">
+            first name invalid !!
+        </p>
+        </div>
+        <div class="my-3">
+            <label for="last_name">last name :</label>
+            <input type="text" id="last_name" formControlName='last_name' class="form-control">
+            <p
+            *ngIf='
+            singUpForm.controls.last_name.invalid && 
+            singUpForm.controls.last_name.touched'
+           class="text-danger"
+           >
+           last name invalid !! 
+       </p>
+        </div>
+        <div class="my-3">
+            <label for="email">email :</label>
+            <input type="text" id="email" formControlName='email'class="form-control">
+            <p class="text-danger" *ngIf='
+            singUpForm.controls.email.invalid
+             && singUpForm.controls.email.touched'>
+             email is invalid !!</p>
+        </div>
+        <div class="my-3">
+            <label for="age">age :</label>
+            <input type="text" id="age" formControlName='age' class="form-control">
+            <p *ngIf='
+            singUpForm.controls.age.invalid 
+            && singUpForm.controls.age.touched'
+            class="text-danger">
+            age is invalid !! </p>
+        </div>
+        <div class="my-3">
+            <label for="password">password :</label>
+            <input type="text" formControlName='password' id="password" class="form-control">
+            <p *ngIf='
+            singUpForm.controls.password.invalid 
+            && singUpForm.controls.password.touched'
+            class="text-danger">
+            password is invalid !! </p>
+        </div>
+        <button [disabled]='singUpForm.invalid' class="btn btn-info">Submit</button>
+        <p class="text-danger my-3 font-italic" >{{message}}</p>
+    </form>
+
+</div>
+
+
+
+<!-- 
+
+age   minimum age is {{singUpForm.controls.age.errors.min.min}}
+and your actual age is {{singUpForm.controls.age.errors.min.actual}} -->
+
+<!-- 
+
+first name minlength is
+{{singUpForm.controls.first_name.errors.minlength.requiredLength}} letters
+and your actualLength is 
+
+{{singUpForm.controls.first_name.errors.minlength.actualLength}} letter -->
+
+
+<!-- 
+last minlength is
+{{singUpForm.controls.first_name.errors.minlength.requiredLength}} letters
+and your actualLength is 
+{{singUpForm.controls.first_name.errors.minlength.actualLength}} letter -->

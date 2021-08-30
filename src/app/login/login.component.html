@@ -1,0 +1,27 @@
+<div class="container my-5">
+    <form [formGroup]='loginForm'(ngSubmit)='login()'>
+        <h1>Login Now</h1>
+        
+       
+        <div class="my-3">
+            <label for="email">email :</label>
+            <input type="text" formControlName='email' id="email" class="form-control">
+            <p *ngIf='
+            loginForm.controls.email.invalid 
+            && loginForm.controls.email.touched' class="text-danger" >
+             email is invalid !!</p>
+        </div>
+       
+        <div class="my-3">
+            <label for="password">password :</label>
+            <input formControlName='password' type="text" id="password" class="form-control">
+            <p *ngIf='
+            loginForm.controls.password.invalid 
+            && loginForm.controls.password.touched' class="text-danger">password is invalid !! </p>
+        </div>
+        <button [disabled]='loginForm.invalid' class="btn btn-info">Login</button>
+        <p class="text-danger my-3 font-italic" >{{message}}</p>
+    </form>
+
+</div>
+

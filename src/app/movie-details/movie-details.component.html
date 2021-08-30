@@ -1,0 +1,28 @@
+<section class="container">
+    <div class="row">
+        <div class="col-6 col-sm-6">
+<img class="img-fluid" [src]="imgSrc+details.poster_path" alt="">
+
+
+        </div>
+        <div class="col-6 col-sm-6 mt-4">
+            <h2>{{details.title}}</h2>
+
+            <p class="mt-5">details : {{details.overview}}</p>
+            <p class="mt-5">rate : {{details.vote_average}}</p>
+
+           <div class="d-flex justify-content-around mt-5">
+                <button class="btn btn-info ml-2">Download Now</button>
+                <button class="btn btn-success ml-2">Watch Here</button>
+                <button class="btn btn-warning ml-2">Select Quality</button>
+
+           </div>
+
+
+        </div>
+
+    </div>
+</section>
+
+
+
