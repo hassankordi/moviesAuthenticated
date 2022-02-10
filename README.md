@@ -1,4 +1,5 @@
-#Authentication Project (Angular + API)
+# Authentication Project (Angular + API)
+
 This project is dynamic and responsive it finds popular, trending, coming soon, top-rated movies dynamically, It has many pages
 Link =>https://authentication-hk.netlify.app/
 Quick access on the project 
